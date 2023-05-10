@@ -1,0 +1,133 @@
+\chapter{反应性系数与反应性控制}
+\section*{习题}
+
+\begin{exercise}
+    名词解释:\,反应性系数,\,温度系数,\,空泡系数,\,功率系数,\,控制毒物价值,\,停堆裕量,\,控制棒价值,\,控制棒积分价值,\,控制棒微分价值,\,可燃毒物,\,硼微分价值,\,临界硼浓度.\,
+    \begin{solution}
+        \begin{enumerate}[(1)]
+            \item 反应性系数:\,核反应堆的某个参数$x$发生单位变化所引起的反应性$\rho$的变化量;\,
+            \item 温度系数:\,介质温度变化$1\,\symrm{K}$所引起的反应性变化量;\,
+            \item 空泡系数:\,冷却剂中空泡份额变化1\% 所引起的反应性变化量;\,
+            \item 功率系数:\,单位功率变化所引起的反应性变化量;\,
+            \item 控制毒物价值:\,某一控制毒物全部投入堆芯所引起的反应性变化量,\,用$\rho_{\symrm{P}}$表示;\,
+            \item 停堆裕量:\,堆芯冷态零功率条件下,\,考虑了堆芯功率降低引入的正反应性和价值最大的一束控制棒初始卡在高位的情况下,\,其余全部控制棒插入后反应堆将达到的次临界水平;\,
+            \item 控制棒价值:\,控制棒全部插入堆芯所引起的反应性变化量;\,
+            \item 控制棒积分价值:\,控制棒从堆外插至堆芯某一位置时所引起的反应性变化量;\,
+            \item 控制棒微分价值:\,控制棒插入单位距离时所引起的反应性变化量;\,
+            \item 可燃毒物:\,随核反应堆燃耗不断消耗能释放反应性的毒物;\,
+            \item 硼微分价值:\,堆芯冷却剂中单位硼浓度变化所引起的反应性变化量;\,
+            \item 临界硼浓度:\,在某一燃耗时刻,\,如果不考虑控制棒,\,完全用堆芯中的可燃毒物和可溶硼来控制,\,使得核反应堆处于临界所需要的硼浓度.\,
+        \end{enumerate}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    在压水堆冷却剂温度\underline{{\kaishu \,较低}}和压水堆硼浓度\underline{{\kaishu \,较高}}时,\,压水堆慢化剂温度系数负得最少.\,
+\end{exercise}
+
+\begin{exercise}
+    某压水核反应堆系统在寿期初控制棒全提的时候$\keff = 1.023$,\,某组控制棒插入$10\,\symrm{cm}$时$\keff = 1.019$,\,则该组控制棒的微分价值为\xparen
+    \begin{xchoices}[showanswer=true]
+        \item 384 pcm/cm
+        \item 400 pcm/cm
+        \item 40.0 pcm/cm
+        \item* 38.4 pcm/cm
+    \end{xchoices}
+    \vspace*{1em}
+    \begin{solution}
+        \begin{equation*}
+            \left(\frac{\keff - 1}{\keff} - \frac{\keff' - 1}{\keff'}\right)/10\,\symrm{cm} = 38.4\,\symrm{pcm/cm}
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    随着慢化剂温度的升高,\,控制棒微分价值变得更负,\,是因为\xparen
+    \begin{xchoices}[showanswer=true]
+        \item 慢化剂密度的减小造成更多的中子泄漏出堆芯
+        \item* 慢化剂温度系数降低,\,引起竞争减弱
+        \item 燃料温度增加,\,中子在燃料中吸收减少
+        \item 慢化剂密度的减小使中子徙动长度增大
+    \end{xchoices}
+\end{exercise}
+
+\begin{exercise}
+    反应性控制的实质是什么?\,其主要任务、形式和途径有哪些?\,
+    \begin{solution}
+        \begin{enumerate}[(1)]
+            \item 实质:\,维持堆内中子平衡关系;\,
+            \item 主要任务:\,紧急控制,\,功率调节,\,燃耗补偿;\,
+            \item 形式:\,改变堆内中子的吸收,\,产生和泄漏;\,
+            \item 途径:\,(改变中子吸收)控制棒,\,可燃毒物,\,可溶硼.\,
+        \end{enumerate}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    一核反应堆在寿期末从100\%\,FP功率运行状态下停堆,\,经过3天冷却至$333\,{}^{\circ}\symrm{C}$,\,在冷却期间,\,硼浓度增加了100\,ppm.\,在停堆与冷却期间所添加的反应性绝对值如下所示.\,请在括号中填入适当的符号($+$或$-$),\,并计算当前的次临界深度.\,
+
+    控制棒 =($-$)$6.918\%\,\Delta k/k$
+
+    氙 =($+$)$2.675\%\,\Delta k/k$
+
+    功率亏损 =($+$)$1.575\%\,\Delta k/k$
+
+    硼 = ($-$) $1.040\%\,\Delta k/k$
+
+    温度 =($+$)$0.500\%\,\Delta k/k$
+    \begin{solution}
+        当前次临界深度
+        \begin{equation*}
+            - 6.918\% + 2.675\% + 1.575\% - 1.040\% + 0.500\% = -3.208\%\,\Delta k/k
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    一核反应堆在80\%\,FP功率运行时,\,操作员向核反应堆冷却剂系统(RCS)中添加10 加仑(gal)的硼酸,\,经过若干分钟,\,操作员按需要调节控制棒的位置,\,以维持核反应堆冷却剂平均温度不变.\,当电厂处于稳定状态时,\,停堆裕量将\underline{{\kaishu \,增加}},\,而轴向功率峰将移向堆芯的\underline{{\kaishu \,上方}}.\,
+\end{exercise}
+
+\begin{exercise}
+    已知参数为:\,核反应堆功率$=100\%\,\symrm{FP}$,\,总功率系数$ = -0.020\%\,\Delta k/k/\,\%\,\symrm{FP}$,\,初始硼浓度$=500\,\symrm{ppm}$,\,硼价值$=-0.010\%\,\Delta k/k/\,\symrm{ppm}$,\,控制棒价值$ = -0.010\%\,\Delta k/k/\,\symrm{cm}$(插入),\,试问通过硼化/稀释、控制插入$50\,\symrm{cm}$、使电厂功率降至$30\%\,\symrm{FP}$所要求的最终硼浓度是多少(假设堆芯的其他状态参数不变)?\,
+    \begin{solution}
+        功率降至30\%\,FP引入反应性
+        \begin{equation*}
+            \Delta\rho = -0.020\%\,\Delta k/k/\,\%\,\symrm{FP} \times \left(30\%\,\symrm{FP} - 100\%\,\symrm{FP}\right) = 1.4\%\,\Delta k/k
+        \end{equation*}
+        控制棒插入$50\,\symrm{cm}$引入反应性
+        \begin{equation*}
+            \Delta\rho_{\symrm{r}} = -0.010\%\,\Delta k/k/\,\symrm{cm} \times 50\,\symrm{cm} = -0.5\%\,\Delta k/k
+        \end{equation*}
+        设最终硼浓度为$c$,\,则硼浓度变化引入反应性
+        \begin{equation*}
+            \Delta\rho_{\symrm{B}} = -0.010\%\,\Delta k/k/\,\symrm{ppm} \times (c-500)\,\symrm{ppm} = -0.010(c-500)\%\,\Delta k/k
+        \end{equation*}
+        而$\Delta\rho + \Delta\rho_{\symrm{r}} + \Delta\rho_{\symrm{B}} = 0$,\,解得
+        \begin{equation*}
+            c = \frac{\Delta\rho + \Delta\rho_{\symrm{r}}}{-0.010} + 500\,\symrm{ppm} = \frac{1.4 - 0.5}{-0.01} + 500\,\symrm{ppm} = 590\,\symrm{ppm}
+        \end{equation*}
+        即经过硼稀释,\,最终硼浓度为$590\,\symrm{ppm}$.\,
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    用提升控制棒外推临界棒位时,\,若该棒组提升12步使得源量程计数从$n_1$增加到$n_2$且$n_2 = 1.5 n_1$.\,假定控制棒微分价值为常数,\,试估算还需提升该棒组多少步才能达到临界?\,
+    \begin{solution}
+        设还需提升该棒组$x$步才能达到临界,\,由倒计数率法,\,有
+        \begin{equation*}
+            \frac{1/n_1 - 1/n_2}{12} = \frac{1/n_2 - 0}{x}
+        \end{equation*}
+        且$n_2 = 1.5 n_1$,\,解得
+        \begin{equation*}
+            x = 24
+        \end{equation*}
+        故还需提升该棒组24步才能达到临界.\,
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    为什么压水堆选择设计成欠慢化?\,
+    \begin{solution}
+        压水堆设计成欠慢化,\,慢化剂温度为负,\,当反应堆功率升高时,\,温度升高,\,水-铀比减小,\,则此时引入负反应性,\,使功率自稳自调,\,即这样的设计是一种固有安全特性.\,
+    \end{solution}
+\end{exercise}

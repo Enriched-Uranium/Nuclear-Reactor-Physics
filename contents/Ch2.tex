@@ -1,0 +1,193 @@
+\chapter{核反应堆核物理基础}
+
+\section*{习题}
+
+\begin{exercise}
+    名词解释:\,易裂变核素,\,可转换核素,\,核反应率,\,中子注量率. 
+    \begin{solution}
+        \begin{enumerate}[(1)]
+            \item 易裂变核素:\,可用任意小能量的中子引发裂变的核素,\,如${}^{233}\symrm{U},\,{}^{235}\symrm{U},\,{}^{239}\symrm{Pu}$等. 
+            \item 可转换核素:\,可裂变核素俘获中子后经历一系列衰变成为易裂变核素,\,这样的可裂变核素成为可转换核素. 
+            \item 核反应率:\,单位时间单位体积内所有中子与介质原子核发生反应的次数,\,即
+            \begin{equation*}
+                R = \vSigma \phi = \vSigma n v \quad (\symrm{m^{-3}\cdot s^{-1}})
+            \end{equation*}
+            \item 中子注量率:\,中子密度和中子速率的乘积,\,单位时间单位面积上的中子数,\,即
+            \begin{equation*}
+                \phi = n v \quad (\symrm{m^{-2}\cdot s^{-1}})
+            \end{equation*}
+        \end{enumerate}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    在${}^{235}\symrm{U}$的裂变反应所发射的中子中,\,缓发中子的份额为(0.0065).
+\end{exercise}
+
+\begin{exercise}
+    密度为$1000\,\symrm{kg/m^3}$的水对于能量为$0.0253\,\symrm{eV}$的中子的宏观吸收截面约为多少?\,(已知H,\,O的热中子微观吸收截面分别为0.332\,b和0.00027\,b,\,阿伏伽德罗常数为$6.022 \times 10^{23}$)
+    \begin{solution}
+        水的相对分子质量为
+        \begin{equation*}
+            M_{\symrm{H_2O}} = 2 \times 1.00797 + 1 \times 15.9994 = 18.0153
+        \end{equation*}
+        单位体积内氧原子个数
+        \begin{equation*}
+            N_{\symrm{O}} = N_{\symrm{H_2O}} = \frac{\rho N_{\symrm{A}}}{M_{\symrm{H_2O}}} = \frac{10^6 \times 6.022 \times 10^{23}}{18.0153} = 3.343 \times 10^{28} \, \symrm{m^{-3}}
+        \end{equation*}
+        单位体积内氢原子个数
+        \begin{equation*}
+            N_{\symrm{H}} = 2 N_{\symrm{O}} = 2 \times 3.343 \times 10^{28} = 6.686 \times 10^{28} \, \symrm{m^{-3}}
+        \end{equation*}
+        于是
+        \begin{equation*}
+            \vSigma_{\symrm{a,\,H_2O}} = N_{\symrm{H}}\sigma_{a,\,H} + N_{\symrm{O}}\sigma_{a,\,O} = 6.686 \times 0.332 + 3.343 \times 0.00027 \, \symrm{m^{-1}} = 2.221\,\symrm{m^{-1}}
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    某压水堆采用$\symrm{UO_2}$作燃料,\,其质量富集度为2.43\%,\,密度为$1.0\times 10^4\,\symrm{kg/m^3}$,\,试计算:\,当中子能量为0.0253\,eV时,\,$\symrm{UO_2}$的宏观吸收截面和宏观裂变截面(假设铀只有${}^{235}\symrm{U}$和${}^{238}\symrm{U}$,\,氧均为${}^{16}\symrm{O}$).\,
+    \begin{solution}
+        设${}^{235}\symrm{U}$原子核所占比例为$c_5$,\,则
+        \begin{equation*}
+            c_5 = \left[1+0.9874\left(\frac{1}{\varepsilon}-1\right)\right]^{-1} = \left[1+0.9874\left(\frac{1}{0.0243}-1\right)\right]^{-1} = 0.024602
+        \end{equation*}
+        $\symrm{UO_2}$相对分子质量
+        \begin{equation*}
+            M_{\symrm{UO_2}} = 235c_5 + 238(1-c_5) + 16\times 2 = 269.93
+        \end{equation*}
+        $\symrm{UO_2}$单位体积分子数
+        \begin{equation*}
+            N_{\symrm{UO_2}} = \frac{\rho N_{\symrm{A}}}{M_{\symrm{UO_2}}} = \frac{10^4 \times 6.022 \times 10^{23}}{269.93} \, \symrm{m^{-3}} = 2.231 \times 10^{28}\,\symrm{m^{-3}}
+        \end{equation*}
+        则
+        \begin{align*}
+            &N_5 = c_5 N_{\symrm{UO_2}} = 0.05489 \times 10^{28}\,\symrm{m^{-3}} \\
+            &N_8 = (1-c_5) N_{\symrm{UO_2}} = 2.176 \times 10^{28}\,\symrm{m^{-3}} \\
+            &N_{\symrm{O}} = 2 N_{\symrm{UO_2}} = 4.462 \times 10^{28}\,\symrm{m^{-3}}
+        \end{align*}
+        对于能量为0.0253\,eV的中子,\,查附录3得,\,$\sigma_{\symrm{a,\,U_5}} = 680.9\,\symrm{b},\,\sigma_{\symrm{f,\,U_5}} = 584.8925\,\symrm{b},\,\sigma_{\symrm{a,\,U_8}} = 2.7\,\symrm{b},\,\sigma_{\symrm{a,\,O}} = 2.7 \times 10^{-4}\,\symrm{b}$,\,故
+        \begin{align*}
+            &\vSigma_{\symrm{a,\,UO_2}} = N_5\sigma_{\symrm{a,\,U_5}} + N_8\sigma_{\symrm{a,\,U_8}} + N_{\symrm{O}}\sigma_{\symrm{a,\,O}} = 43.25\,\symrm{m^{-1}} \\
+            &\vSigma_{\symrm{f,\,UO_2}} = N_5\sigma_{\symrm{f,\,U_5}} = 32.10\,\symrm{m^{-1}}
+        \end{align*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    为得到1\,kWh的能量,\,需要多少质量的${}^{235}\symrm{U}$发生裂变?
+    \begin{solution}
+        设需要$m\,\symrm{kg}$的${}^{235}\symrm{U}$发生裂变,\,则
+        \begin{equation*}
+            \frac{m\times 10^3}{235} \times 6.022 \times 10^{23} \times 200 \times 10^6 \times 1.6 \times 10^{-19} = 10^3 \times 3600 \quad (\symrm{J})
+        \end{equation*}
+        解得
+        \begin{equation*}
+            m = 4.390 \times 10^{-8}\,\symrm{kg}
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    有一座小型核电厂,\,电功率为150\,MW,\,设电厂的效率(电功率与热功率的比值)为30\%.\,假设发生裂变的核素为纯${}^{235}\symrm{U}$,\,且每次裂变释放出的能量为200\,MeV,\,试估算该电厂核反应堆额定功率运行1\,h所消耗的${}^{235}\symrm{U}$量.\,
+    \begin{solution}
+        设该电厂核反应堆额定功率运行1\,h消耗${}^{235}\symrm{U}$的质量为$m\,\symrm{kg}$,\,取俘获-裂变比$\alpha = 0.17$,\,则
+        \begin{equation*}
+            \frac{1}{1+\alpha} \cdot \frac{m\times 10^3}{235} \times 6.022 \times 10^{23} \times 200 \times 10^6 \times 1.6 \times 10^{-19} \times 30\% = 150 \times 10^6 \times 3600 \quad (\symrm{J})
+        \end{equation*}
+        解得
+        \begin{equation*}
+            m = 0.02568\,\symrm{kg}
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    一座电厂的额定电功率$P_{\symrm{e}}$为1000\,MW,\,效率$\eta_{\symrm{e}}$(电功率与热功率的比值)为32\%,\,年负荷因子$\eta$(实际年发电量与额定年发电量的比值)为0.85.\,
+    \begin{enumerate}[(1)]
+        \item 若该电厂为核电厂,\,假设发生裂变的核素为纯${}^{235}\symrm{U}$,\,且每次裂变释放出的能量为200\,MeV,\,试估算该电厂一年需要消耗多少吨${}^{235}\symrm{U}$?
+        \item 若该电厂为火电厂,\,已知标准煤的发热值为$Q=29.271\,\symrm{MJ/kg}$,\,试估算该电厂一年需要消耗多少吨标准煤?
+    \end{enumerate}
+    \begin{solution}
+        \begin{enumerate}[(1)]
+            \item 设该电厂一年需要消耗$m$吨${}^{235}\symrm{U}$,\,取俘获-裂变比$\alpha = 0.17$,\,则
+            \begin{equation*}
+                \frac{1}{1+\alpha} \cdot \frac{m\times 10^6}{235} \times 6.022 \times 10^{23} \times 200 \times 10^6 \times 1.6 \times 10^{-19} \times 32\% = 0.85 \times 1000 \times 10^6 \times 365 \times 24 \times 3600 \quad (\symrm{J})
+            \end{equation*}
+            解得
+            \begin{equation*}
+                m = 1.195\,\symrm{t}
+            \end{equation*}
+            \item 设该电厂一年需要消耗$M$吨标准煤,\,显然有$\eta_{\symrm{e}} M Q = \eta P_{\symrm{e}} t$,\,即
+            \begin{equation*}
+                32\% M \times 10^3 \times 29.271 \times 10^6 = 0.85 \times 1000 \times 10^6 \times 365 \times 24 \times 3600 \quad (\symrm{J})
+            \end{equation*}
+            解得
+            \begin{equation*}
+                M = 2.8618 \times 10^6\,\symrm{t}
+            \end{equation*}
+        \end{enumerate}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    在纯水慢化剂中加了一些硼酸$\symrm{H_3BO_3}$,\,使其热中子吸收截面增加了10\%,\,若已知水的宏观热中子吸收截面为$\vSigma_{\text{水}} = 0.0221\,\symrm{cm^{-1}}$,\,硼酸的微观热中子吸收截面为$\sigma_{\text{硼酸}}=756\,\symrm{b}$和天然硼的相对原子质量$A_{\symrm{B}}=10.82$,\,试求此时慢化剂中的硼浓度$C_{\symrm{B}}$为多少ppm(1\,ppm的硼浓度是指1\,kg水中含1\,mg的天然硼)\,?
+    \begin{solution}
+        设硼酸浓度为$C_{\symrm{H_3BO_3}}\,\symrm{mg/(kg\text{水})}$,\,近似认为慢化剂密度仍然为水的密度$\rho = 10^3\,\symrm{kg/m^3}$,\,则
+        \begin{equation*}
+            N_{\symrm{H_3BO_3}} = \frac{\rho C_{\symrm{H_3BO_3}} \times 10^{-3} \times N_{\symrm{A}}}{M_{\symrm{H_3BO_3}}}
+        \end{equation*}
+        而
+        \begin{equation*}
+            M_{\symrm{H_3BO_3}} = 3 \times 1.00797 + 10.82 + 3 \times 15.9994 = 29.84331
+        \end{equation*}
+        由题意,\,$N_{\symrm{H_3BO_3}} \sigma_{\symrm{H_3BO_3}} = 0.1 \vSigma_{\text{水}}$,\,于是
+        \begin{equation*}
+            N_{\symrm{H_3BO_3}} = \frac{0.1 \times 0.0221 \times 100}{756 \times 10^{-28}}\,\symrm{m^{-3}} = 2.9233 \times 10^{24}\,\symrm{m^{-3}}
+        \end{equation*}
+        联立上述式,\,得
+        \begin{equation*}
+            C_{\symrm{H_3BO_3}} = 144.87\,\symrm{mg/(kg\text{水})}
+        \end{equation*}
+        在1\,kg水中,\,物质的量$n(\symrm{H_3BO_3}) = n(\symrm{B})$,\,故有
+        \begin{equation*}
+            \frac{C_{\symrm{B}}}{A_{\symrm{B}}} = \frac{C_{\symrm{H_3BO_3}}}{M_{\symrm{H_3BO_3}}}
+        \end{equation*}
+        解得
+        \begin{equation*}
+            C_{\symrm{B}} = 52.524\,\symrm{mg/(kg\text{水})}
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    为什么裂变碎片一般都带有放射性?
+    \begin{solution}
+        裂变碎片大都是一些不稳定的丰中子核素,\,通常需要经历$\beta$衰变才能稳定.\,
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    一个典型的商用压水堆新堆中,\,若在一个短的时间间隔内发射出$10^5$个缓发中子,\,则在这同一时间内发射出的瞬发中子数大约为多少?
+    \begin{solution}
+        在以${}^{235}\symrm{U}$作核燃料的热中子核反应堆中,\,缓发中子份额$\beta = 0.0065$,\,故瞬发中子数为
+        \begin{equation*}
+            n_0 = \frac{10^5}{\beta} \cdot (1-\beta) = \frac{10^5}{0.0065} \cdot (1-0.0065) = 1.528 \times 10^{7}
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    设某吸收剂的微观吸收截面$\sigma_{\symrm{a}}(E)$服从$1/v$定律,\,假定近似中子能谱可用$1/E$谱描述,\,试求该吸收剂第$g$群$(E_{g-1},\,E_g)$的平均微观吸收截面$\sigma_{\symrm{a}\,g}$.\,
+    \begin{solution}
+        由题意,\,$\sigma_{\symrm{a}}(E) \propto 1/v \propto 1/\sqrt{E},\,n(E) \propto 1/E$,\,则$\phi(E) \propto (1/E) \cdot \sqrt{E} = 1/\sqrt{E}$,\,于是
+        \begin{equation*}
+            \sigma_{\symrm{a}\,g} = \frac{\int_{E_{g-1}}^{E_g} \sigma_{\symrm{a}}(E) \phi(E) \dd{E}}{\int_{E_{g-1}}^{E_g} \phi(E) \dd{E}} \propto \frac{\int_{E_{g-1}}^{E_g} E^{-1} \dd{E}}{\int_{E_{g-1}}^{E_g} E^{-1/2} \dd{E}} = \frac{\loge (E_g/E_{g-1})}{2\left(\sqrt{E_g} - \sqrt{E_{g-1}}\right)}
+        \end{equation*}
+        将$\sigma_{\symrm{a}}(E) \propto 1/\sqrt{E},\,\phi(E) \propto 1/\sqrt{E}$的比例系数全部归一为$C_{\sigma}$,\,则
+        \begin{equation*}
+            \sigma_{\symrm{a}\,g} = \frac{C_{\sigma} \loge (E_g/E_{g-1})}{2\left(\sqrt{E_g} - \sqrt{E_{g-1}}\right)}
+        \end{equation*}
+    \end{solution}
+\end{exercise}

@@ -1,0 +1,151 @@
+\chapter{核反应堆动力学}
+\section*{习题}
+
+\begin{exercise}
+    名词解释:\,热中子寿期,\,核反应堆周期,\,瞬发临界,\,次临界度.\,
+    \begin{solution}
+        \begin{enumerate}
+            \item 热中子寿期:\,热中子被吸收前所花费的时间;\,
+            \item 核反应堆周期:\,中子密度增加到原来的e倍所需要的时间,\,用$T$表示;\,
+            \item 瞬发临界:\,$\rho = \beta$,\,仅靠瞬发中子,\,核反应堆就会达到临界;\,
+            \item 次临界度:\,有效增殖系数与1的距离,\,即$1 - \keff$.\,
+        \end{enumerate}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    某核反应堆中子密度随时间的变化可以表示为$n(t) = A_0 \symrm{e}^{\omega_1 t} + A_1 \symrm{e}^{\omega_2 t}$,\,则其核反应堆周期为\xparen
+    \begin{xchoices}[showanswer=true]
+        \item $T(t) = A_0 \symrm{e}^{\omega_1 t} + A_1 \symrm{e}^{\omega_2 t}$
+        \item $T(t) = A_0 \omega_1 \symrm{e}^{\omega_1 t} + A_1 \omega_2 \symrm{e}^{\omega_2 t}$
+        \item $\displaystyle T(t) = \frac{A_0 \omega_1 \symrm{e}^{\omega_1 t} + A_1 \omega_2 \symrm{e}^{\omega_2 t}}{A_0 \symrm{e}^{\omega_1 t} + A_1 \symrm{e}^{\omega_2 t}}$
+        \item* $\displaystyle T(t) = \frac{A_0 \symrm{e}^{\omega_1 t} + A_1 \symrm{e}^{\omega_2 t}}{A_0 \omega_1 \symrm{e}^{\omega_1 t} + A_1 \omega_2 \symrm{e}^{\omega_2 t}}$
+    \end{xchoices}
+    
+    \vspace*{2em}
+    
+    \begin{solution}
+        \begin{equation*}
+            T(t) = \frac{n(t)}{\symrm{d}n(t)/\symrm{d}t} = \frac{A_0 \symrm{e}^{\omega_1 t} + A_1 \symrm{e}^{\omega_2 t}}{A_0 \omega_1 \symrm{e}^{\omega_1 t} + A_1 \omega_2 \symrm{e}^{\omega_2 t}}
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    试根据中子平衡关系写出点堆动力学方程并简述其适用范围.\,
+    \begin{solution}
+        中子密度变化率 = 产生率(瞬发+缓发) - 消失率(泄漏+吸收)
+        \begin{equation*}
+            \tikzmarknode{n}{\highlight{red}{$\dv{n(t)}{t}$}} =
+            \color{BlueViolet}
+            \overbrace{
+                \left(\tikzmarknode{sf}{\highlight{Plum}{\color{black} $k \frac{n}{l} (1-\beta)$}} {\color{black} +} \tikzmarknode{hf}{\highlight{NavyBlue}{\color{black}  $\sum\limits_{i=1}^{6} \lambda_i C_i(t)$}}\right)
+            }^{\text{\fangsong \footnotesize \textcolor{BlueViolet!85}{中子的产生率(瞬发+缓发)}}}
+                \color{black} - 
+                \tikzmarknode{xs}{\highlight{Bittersweet}{\color{black} $\frac{n}{l}$}}
+        \end{equation*}
+        \vspace*{0.5\baselineskip}
+        \begin{tikzpicture}[overlay,remember picture,>=stealth,nodes={align=left,inner ysep=1pt},<-]
+            % 中子密度变化率
+            \path (n.north) ++ (0,0.5em) node[anchor=south east,color=Maroon!85] (ntext){\fangsong{\footnotesize 中子密度变化率}};
+            \draw [color=Maroon](n.north) |- ([xshift=-0.3ex,color=Maroon]ntext.south west);
+            % 瞬发中子的产生
+            \path (sf.north) ++ (-2.4,-2.2em) node[anchor=north west,color=Plum!85] (sftext){{\fangsong{\footnotesize 瞬发中子的产生}}};
+            \draw [color=Plum](sf.south) |- ([xshift=-0.3ex,color=Plum]sftext.south west);
+            % 缓发中子的产生
+            \path (hf.north) ++ (-2.4,-4.2em) node[anchor=north west,color=NavyBlue!85] (hftext){{\fangsong{\footnotesize 缓发中子的产生}}};
+            \draw [color=NavyBlue](hf.south) |- ([xshift=-0.3ex,color=NavyBlue]hftext.south west);
+            % 中子的消失(泄漏+消失)
+            \path (xs.north) ++ (0.1,-3.2em) node[anchor=north west,color=Bittersweet!85] (xstext){\fangsong{\footnotesize 中子的消失(泄漏+消失)}};
+            \draw [color=Bittersweet](xs.south) |- ([xshift=-0.3ex,color=Bittersweet]xstext.south east);
+        \end{tikzpicture}
+
+        缓发中子先驱核浓度变化率 = 产生率(裂变) + 消失率(衰变)
+        \vspace*{1em}
+        \begin{equation*}
+            \tikzmarknode{C}{\highlight{red}{$\dv{C_i(t)}{t}$}} =
+            \tikzmarknode{lb}{\highlight{Plum}{\color{black} $\beta_i k \frac{n}{l}$}} {\color{black} -} \tikzmarknode{sb}{\highlight{NavyBlue}{\color{black}  $\lambda_i C_i(t)$}}\quad {\color{black} i = 1,\,2,\,\cdots,\,6}
+        \end{equation*}
+        \vspace*{0.5\baselineskip}
+        \begin{tikzpicture}[overlay,remember picture,>=stealth,nodes={align=left,inner ysep=1pt},<-]
+            % 缓发中子先驱核浓度变化率
+            \path (C.north) ++ (0,0.5em) node[anchor=south east,color=Maroon!85] (Ctext){\fangsong{\footnotesize 缓发中子先驱核浓度变化率}};
+            \draw [color=Maroon](C.north) |- ([xshift=-0.3ex,color=Maroon]Ctext.south west);
+            % 缓发中子先驱核的产生(裂变)
+            \path (lb.north) ++ (-4.2,-2.2em) node[anchor=north west,color=Plum!85] (lbtext){{\fangsong{\footnotesize 缓发中子先驱核的产生(裂变)}}};
+            \draw [color=Plum](lb.south) |- ([xshift=-0.3ex,color=Plum]lbtext.south west);
+            % 缓发中子先驱核的消失(衰变)
+            \path (sb.north) ++ (0.1,-2.2em) node[anchor=north west,color=NavyBlue!85] (sbtext){{\fangsong{\footnotesize 缓发中子先驱核的消失(衰变)}}};
+            \draw [color=NavyBlue](sb.south) |- ([xshift=-0.3ex,color=NavyBlue]sbtext.south east);
+        \end{tikzpicture}
+
+        \newpage
+        令$\vLambda = l/k$为中子代时间,\,则
+        \begin{align*}
+            &\dv{n}{t} = \frac{\rho - \beta}{\vLambda}n + \sum_{i=1}^{6} \lambda_i C_i(t) \\
+            &\dv{C_i(t)}{t} = \frac{\beta_i}{\vLambda}n - \lambda_i C(i) \quad i = 1,\,2,\,\cdots,\,6
+        \end{align*}
+
+        适用范围:\,只关注中子密度随时间的变化,\,忽略其随空间的变化,\,即点堆模型.\,
+
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    试从中子平衡方程导出瞬发临界的条件.\,
+    \begin{solution}
+        瞬发临界,\,即不考虑缓发中子且达到临界,\,于是
+        \begin{equation*}
+            \dv{n}{t} = \frac{\rho - \beta}{\vLambda}n = 0 \Rightarrow \rho = \beta
+        \end{equation*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    在核反应堆启动过程中,\,在操作员未进行任何操作的情况下,\,核反应堆功率在两分钟之内从$3\times 10^{-6}\%\,\symrm{FP}$增加到$5\times 10^{-6}\%\,\symrm{FP}$,\,则功率增长过程中的平均核反应堆周期是多少秒?
+    \begin{solution}
+        核反应堆在启堆阶段低功率水平下不考虑缓发中子,\,则中子密度满足
+        \begin{equation*}
+            n(t) = n_0 \symrm{e}^{t/T}
+        \end{equation*}
+        核反应堆功率$P$与中子密度$n$成正比,\,即有
+        \begin{align*}
+                        &\frac{n_0 \symrm{e}^{(t+120)/T}}{n_0 \symrm{e}^{t/T}} = \frac{5\times 10^{-6}}{3\times 10^{-6}} \\
+            \Rightarrow & T = \frac{120}{\loge (5/3)}\,\symrm{s} = 234.91\,\symrm{s}
+        \end{align*}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}
+    向一个处于停堆状态的核反应堆中添加某个正反应性后,\,尽管此时的$\keff < 1$,\,但观察到中子计数率在增长,\,这种现象的起因是\xparen
+    \begin{xchoices}[showanswer=true]
+        \item 缓发中子
+        \item 等温温度系数
+        \item 中子慢化
+        \item* 次临界增殖
+    \end{xchoices}
+\end{exercise}
+
+\begin{exercise}
+    缓发中子对核反应堆的稳定性贡献比瞬发中子大,\,是因为它们使中子平均代时间\underline{延长},\,并且它们在诞生时具有\underline{更低}的动能.\,
+\end{exercise}
+
+\begin{exercise}
+    在核反应堆启动期间,\,当硼浓度为$C_{\symrm{B}} = 1500\,\symrm{ppm}$时,\,平均计数率为$n_1$,\,且已知此时堆芯的$k_{\symrm{eff,1}} = 0.97$;\,当硼浓度稀释到$C_{\symrm{B}} = 1260\,\symrm{ppm}$时,\,平均计数率为$n_2$;\,若$n_2 = 5n_1$,\,试估算在此期间因硼稀释引进了多少pcm的反应性?
+    \begin{solution}
+        核反应堆启动趋近临界时满足次临界公式,\,即
+        \begin{equation*}
+            N = \frac{S_0}{1-\keff}
+        \end{equation*}
+        由题意,\,得
+        \begin{align*}
+            &n_1 = \frac{S_0}{1-k_{\symrm{eff,1}}} \\
+            &n_2 = \frac{S_0}{1-k_{\symrm{eff,2}}} = 5 n_1
+        \end{align*}
+        解得$k_{\symrm{eff,2}} = 0.994$.\,由$\rho = (\keff - 1)/\keff$,\,得
+        \begin{equation*}
+            \rho_1 = -3092.8\,\symrm{pcm},\;\rho_2 = -603.62\,\symrm{pcm}
+        \end{equation*}
+        引入反应性$\Delta \rho = \rho_2 - \rho_1 = 2489.2\,\symrm{pcm}$.\,
+    \end{solution}
+\end{exercise}
