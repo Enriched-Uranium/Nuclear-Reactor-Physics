@@ -5,15 +5,16 @@
     试总结中子扩散理论的适用范围。
     \begin{solution}
         \begin{enumerate}[(1)]
-            \item 有限介质内距表面几个自由程之外的内部区域，即满足无限介质假设；
-            \item 在距强吸收体几个自由程之外的区域，即满足弱吸收假设；
-            \item 在距中子源几个自由程之外或两种扩散性质差异显著的介质交界面几个自由程之外的区域，即满足中子通量密度缓慢变化。
+            \item 介质无限均匀；
+            \item 在L系内散射各向同性；
+            \item 介质弱吸收；
+            \item 中子注量率分布变化缓慢。
         \end{enumerate}
     \end{solution}
 \end{exercise}
 
 \begin{exercise}
-    有两束方向相反的平行热中子束射到${}^{235}\symrm{U}$薄片上，设其上某点自左面人射的中子束强度为$10^{12}\,\symrm{cm^2\cdot s^{-1}}$，自右面人射的中子束强度$2 \times 10^{12}\,\symrm{cm^2\cdot s^{-1}}$。计算：
+    有两束方向相反的平行热中子束射到${}^{235}\symrm{U}$薄片上，设其上某点自左面入射的中子束强度为$10^{12}\,\symrm{cm^{-2}\cdot s^{-1}}$，自右面入射的中子束强度$2 \times 10^{12}\,\symrm{cm^{-2}\cdot s^{-1}}$。计算：
     \begin{enumerate}[(1)]
         \item 该点的中子注量率；
         \item 该点的中子流密度；
@@ -49,7 +50,8 @@
             \item \begin{equation*}
                 \phi = \lim_{r\to 0} \frac{5\times 10^{13}}{r} \nsin \left(\frac{\pi r}{R}\right) = \lim_{r\to 0} \frac{5\times 10^{13}}{r} \cdot \frac{\pi r}{R} = 5\times 10^{13} \times \frac{\pi}{50}\,\symrm{cm^{-2}\cdot s^{-1}} = \pi \times 10^{12}\,\symrm{cm^{-2}\cdot s^{-1}}
             \end{equation*}
-            \item \begin{equation*}
+            \item $D = 0.8\times 10^{-2}\,\symrm{m} = 0.8\,\symrm{cm}$
+            \begin{equation*}
                 J(r) = -D\nabla \phi(r) = -D \dv{\phi(r)}{r} = 4\times 10^{13} \left[\frac{1}{r^2}\nsin \left(\frac{\pi r}{50}\right) - \frac{\pi}{50 r} \ncos\left(\frac{\pi r}{50}\right)\right]\,\symrm{cm^{-2}\cdot s^{-1}}
             \end{equation*}
             \item \begin{equation*}
@@ -107,7 +109,7 @@
 \begin{exercise}
     试求边长为$a,\,b,\,c$（包括外推距离）的长方体裸堆的几何曲率和中子注量率分布。设有一边长$a = b = 0.5\,\symrm{m},\,c = 0.6\,\symrm{m}$（包括外推距离）的长方体裸堆，$L = 0.0434\,\symrm{m},\,\tau = 6\,\symrm{cm^2}$。
     \begin{enumerate}[(1)]
-        \item 求达到临界时所必需的$K_{\infty}$;
+        \item 求达到临界时所必需的$k_{\infty}$;
         \item 如果功率为$5000\,\symrm{kW},\,\vSigma_{\symrm{f}} = 4.01\,\symrm{m^{-1}}$，假设每次裂片释放出的能量为$200\,\symrm{MeV}$，求中子注量率分布。
     \end{enumerate}
     \begin{solution}
@@ -159,11 +161,11 @@
             \end{equation*}
             \item 由题意，有
             \begin{equation*}
-                P = E_{\symrm{f}}\int_V \vSigma_{\symrm{f}} \phi \dd{V} = E_{\symrm{f}} \vSigma_{\symrm{f}} A_n \int_{-a/2}^{a/2} \ncos\left(\frac{\pi}{a}x\right) \dd{x} \int_{-b/2}^{b/2} \ncos\left(\frac{\pi}{b}y\right) \dd{y} \int_{-c/2}^{c/2} \ncos\left(\frac{\pi}{c}z\right) \dd{z} = E_{\symrm{f}} \vSigma_{\symrm{f}} A_n abc \left(\frac{2}{\pi}\right)^3
+                P = E_{\symrm{f}}\int_V \vSigma_{\symrm{f}} \phi \dd{V} = E_{\symrm{f}} \vSigma_{\symrm{f}} A'_n \int_{-a/2}^{a/2} \ncos\left(\frac{\pi}{a}x\right) \dd{x} \int_{-b/2}^{b/2} \ncos\left(\frac{\pi}{b}y\right) \dd{y} \int_{-c/2}^{c/2} \ncos\left(\frac{\pi}{c}z\right) \dd{z} = E_{\symrm{f}} \vSigma_{\symrm{f}} A'_n abc \left(\frac{2}{\pi}\right)^3
             \end{equation*}
             于是
             \begin{equation*}
-                A_n = \frac{P(\pi/2)^3}{E_{\symrm{f}} \vSigma_{\symrm{f}} abc} = \frac{5\times 10^6 \times (\pi/2)^3}{200 \times 10^6 \times 1.6 \times 10^{-19} \times 4.01 \times 0.5 \times 0.5 \times 0.6}\,\symrm{m^{-2}\cdot s^{-1}} = 1.007 \times 10^{18}\,\symrm{m^{-2}\cdot s^{-1}}
+                A'_n = \frac{P(\pi/2)^3}{E_{\symrm{f}} \vSigma_{\symrm{f}} abc} = \frac{5\times 10^6 \times (\pi/2)^3}{200 \times 10^6 \times 1.6 \times 10^{-19} \times 4.01 \times 0.5 \times 0.5 \times 0.6}\,\symrm{m^{-2}\cdot s^{-1}} = 1.007 \times 10^{18}\,\symrm{m^{-2}\cdot s^{-1}}
             \end{equation*}
             故中子注量率分布
             \begin{equation*}
@@ -180,12 +182,12 @@
             \item 按单群理论
             \begin{align*}
                 &B_{\symrm{m}}^2 = \frac{k_{\infty} - 1}{L^2} = \frac{1.28 - 1}{1.8\times 10^{-2}}\,\symrm{m^{-2}} = 15.56\,\symrm{m^{-2}} \\
-                &P_L = \frac{1}{L^2 B_{\symrm{g}}^2} = \frac{1}{L^2 B_{\symrm{m}}^2} = \frac{1}{1 + 1.8\times 10^{-2}\times 15.56} = 0.7812
+                &P_L = \frac{1}{1 + L^2 B_{\symrm{g}}^2} = \frac{1}{1 + L^2 B_{\symrm{m}}^2} = \frac{1}{1 + 1.8\times 10^{-2}\times 15.56} = 0.7812
             \end{align*}
             \item 按修正单群理论
             \begin{align*}
                 &B_{\symrm{m}}^2 = \frac{k_{\infty} - 1}{M^2} = \frac{k_{\infty} - 1}{L^2 + \tau} = \frac{1.28 - 1}{1.8\times 10^{-2} + 1.2\times 10^{-2}}\,\symrm{m^{-2}} = 9.333\,\symrm{m^{-2}} \\
-                &P_L = \frac{1}{M^2 B_{\symrm{g}}^2} = \frac{1}{(L^2 + \tau) B_{\symrm{m}}^2} = \frac{1}{1 + (1.8\times 10^{-2} + 1.2\times 10^{-2})\times 9.333} = 0.7813
+                &P_L = \frac{1}{1 + M^2 B_{\symrm{g}}^2} = \frac{1}{1 + (L^2 + \tau) B_{\symrm{m}}^2} = \frac{1}{1 + (1.8\times 10^{-2} + 1.2\times 10^{-2})\times 9.333} = 0.7813
             \end{align*}
         \end{enumerate}
     \end{solution}
@@ -211,11 +213,11 @@
             \end{equation*}
             \item 材料曲率
             \begin{equation*}
-                B_{\symrm{m}}^2 = \frac{k_{\infty} - 1}{M^2} = \frac{k_{\infty} - 1}{L^2 + \tau} = \frac{1.19 - 1}{6.6\times 10^{-4} + 0.5\times 10^{-2}}\,\symrm{m^{-2}} = 33.57\,\symrm{-2}
+                B_{\symrm{m}}^2 = \frac{k_{\infty} - 1}{M^2} = \frac{k_{\infty} - 1}{L^2 + \tau} = \frac{1.19 - 1}{6.6\times 10^{-4} + 0.5\times 10^{-2}}\,\symrm{m^{-2}} = 33.57\,\symrm{m^{-2}}
             \end{equation*}
             临界时，有
             \begin{equation*}
-                B_{\symrm{g}}^2 = \left(\frac{2.405}{R}\right)^2 + \left(\frac{\pi}{H}\right)^2 = B_{\symrm{m}}^2 = 33.57\,\symrm{-2}
+                B_{\symrm{g}}^2 = \left(\frac{2.405}{R}\right)^2 + \left(\frac{\pi}{H}\right)^2 = B_{\symrm{m}}^2 = 33.57\,\symrm{m^{-2}}
             \end{equation*}
             
             由此解得$H = 0.9726\,\symrm{m}$.
@@ -254,7 +256,7 @@
         \end{figure}
         以球心为坐标原点建立一维球坐标系，如图所示，则临界时单能中子稳态扩散方程（增殖）为
         \begin{equation*}
-            \ddv{\phi(r)}{r} + \frac{2}{r} \dv{\phi(r)}{r} + \frac{k_{\infty} - 1}{L^2}\phi(r) = 0 \xrightarrow{B^2 = (k_{\infty} - 1)/L^2} \ddv{\phi(r)}{r} + \frac{2}{r} \dv{\phi(r)}{r} + B^2 \phi(r) = 0
+            \ddv{\phi(r)}{r} + \frac{2}{r} \dv{\phi(r)}{r} + \frac{k_{\infty} - 1}{L^2}\phi(r) = 0 \xrightarrow{B^2 = (k_{\infty} - 1)/L^2} \ddv{\phi(r)}{r} + \frac{2}{r} \dv{\phi(r)}{r} + B^2 \phi(r) = 0,\,r > 0
         \end{equation*}
         通解为
         \begin{equation*}
@@ -311,7 +313,7 @@
             边界条件
             \begin{enumerate}[(a)]
                 \item $\phi_{\symrm{r}}(x)$为有限正值，于是$C_{\symrm{r}} = 0$;
-                \item $\lim\limits_{r\to 0^{+}} J_{\symrm{r}}(x) = \kappa_{\symrm{r}}^2 \vPhi_{\symrm{r}} \Rightarrow A_{\symrm{r}} = \frac{\kappa_{\symrm{r}}^2 \vPhi_{\symrm{r}} L_{\symrm{r}}}{D} \xlongequal[\kappa_{\symrm{r}}^2 L_{\symrm{r}}^2 = 1]{\kappa_{\symrm{r}} L_{\symrm{r}} = 1} \frac{\kappa_{\symrm{r}} \vPhi_{\symrm{r}}}{D}$
+                \item $\lim\limits_{x\to 0^{+}} J_{\symrm{r}}(x) = \kappa_{\symrm{r}}^2 \vPhi_{\symrm{r}} \Rightarrow A_{\symrm{r}} = \frac{\kappa_{\symrm{r}}^2 \vPhi_{\symrm{r}} L_{\symrm{r}}}{D} \xlongequal[\kappa_{\symrm{r}}^2 L_{\symrm{r}}^2 = 1]{\kappa_{\symrm{r}} L_{\symrm{r}} = 1} \frac{\kappa_{\symrm{r}} \vPhi_{\symrm{r}}}{D}$
             \end{enumerate}
             于是
             \begin{equation*}

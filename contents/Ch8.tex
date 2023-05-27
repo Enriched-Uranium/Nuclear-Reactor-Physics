@@ -4,11 +4,11 @@
 \begin{exercise}
     名词解释:\,热中子寿期,\,核反应堆周期,\,瞬发临界,\,次临界度.\,
     \begin{solution}
-        \begin{enumerate}
+        \begin{enumerate}[(1)]
             \item 热中子寿期:\,热中子被吸收前所花费的时间;\,
             \item 核反应堆周期:\,中子密度增加到原来的e倍所需要的时间,\,用$T$表示;\,
             \item 瞬发临界:\,$\rho = \beta$,\,仅靠瞬发中子,\,核反应堆就会达到临界;\,
-            \item 次临界度:\,有效增殖系数与1的距离,\,即$1 - \keff$.\,
+            \item 次临界度:\,$\keff$是无外源条件下的$\keff$,\,$1 - \keff$即为次临界度.\,
         \end{enumerate}
     \end{solution}
 \end{exercise}
@@ -56,11 +56,11 @@
             \path (hf.north) ++ (-2.4,-4.2em) node[anchor=north west,color=NavyBlue!85] (hftext){{\fangsong{\footnotesize 缓发中子的产生}}};
             \draw [color=NavyBlue](hf.south) |- ([xshift=-0.3ex,color=NavyBlue]hftext.south west);
             % 中子的消失(泄漏+消失)
-            \path (xs.north) ++ (0.1,-3.2em) node[anchor=north west,color=Bittersweet!85] (xstext){\fangsong{\footnotesize 中子的消失(泄漏+消失)}};
+            \path (xs.north) ++ (0.1,-3.2em) node[anchor=north west,color=Bittersweet!85] (xstext){\fangsong{\footnotesize 中子的消失(泄漏+吸收)}};
             \draw [color=Bittersweet](xs.south) |- ([xshift=-0.3ex,color=Bittersweet]xstext.south east);
         \end{tikzpicture}
 
-        缓发中子先驱核浓度变化率 = 产生率(裂变) + 消失率(衰变)
+        缓发中子先驱核浓度变化率 = 产生率(裂变) - 消失率(衰变)
         \vspace*{1em}
         \begin{equation*}
             \tikzmarknode{C}{\highlight{red}{$\dv{C_i(t)}{t}$}} =

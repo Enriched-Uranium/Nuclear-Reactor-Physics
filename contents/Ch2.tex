@@ -7,12 +7,12 @@
     \begin{solution}
         \begin{enumerate}[(1)]
             \item 易裂变核素:\,可用任意小能量的中子引发裂变的核素,\,如${}^{233}\symrm{U},\,{}^{235}\symrm{U},\,{}^{239}\symrm{Pu}$等. 
-            \item 可转换核素:\,可裂变核素俘获中子后经历一系列衰变成为易裂变核素,\,这样的可裂变核素成为可转换核素. 
+            \item 可转换核素:\,俘获中子后经历一系列衰变成为易裂变核素的可裂变核素. 
             \item 核反应率:\,单位时间单位体积内所有中子与介质原子核发生反应的次数,\,即
             \begin{equation*}
                 R = \vSigma \phi = \vSigma n v \quad (\symrm{m^{-3}\cdot s^{-1}})
             \end{equation*}
-            \item 中子注量率:\,中子密度和中子速率的乘积,\,单位时间单位面积上的中子数,\,即
+            \item 中子注量率:\,中子密度和中子速率的乘积,\,即
             \begin{equation*}
                 \phi = n v \quad (\symrm{m^{-2}\cdot s^{-1}})
             \end{equation*}
@@ -21,7 +21,7 @@
 \end{exercise}
 
 \begin{exercise}
-    在${}^{235}\symrm{U}$的裂变反应所发射的中子中,\,缓发中子的份额为(0.0065).
+    在${}^{235}\symrm{U}$的裂变反应所发射的中子中,\,缓发中子的份额为($1\,\beta = 0.0065$).
 \end{exercise}
 
 \begin{exercise}
@@ -134,13 +134,13 @@
 \begin{exercise}
     在纯水慢化剂中加了一些硼酸$\symrm{H_3BO_3}$,\,使其热中子吸收截面增加了10\%,\,若已知水的宏观热中子吸收截面为$\vSigma_{\text{水}} = 0.0221\,\symrm{cm^{-1}}$,\,硼酸的微观热中子吸收截面为$\sigma_{\text{硼酸}}=756\,\symrm{b}$和天然硼的相对原子质量$A_{\symrm{B}}=10.82$,\,试求此时慢化剂中的硼浓度$C_{\symrm{B}}$为多少ppm(1\,ppm的硼浓度是指1\,kg水中含1\,mg的天然硼)\,?
     \begin{solution}
-        设硼酸浓度为$C_{\symrm{H_3BO_3}}\,\symrm{mg/(kg\text{水})}$,\,近似认为慢化剂密度仍然为水的密度$\rho = 10^3\,\symrm{kg/m^3}$,\,则
+        设硼酸浓度为$C_{\symrm{H_3BO_3}}\,\symrm{ppm}$,\,近似认为慢化剂密度仍然为水的密度$\rho = 10^3\,\symrm{kg/m^3}$,\,则
         \begin{equation*}
             N_{\symrm{H_3BO_3}} = \frac{\rho C_{\symrm{H_3BO_3}} \times 10^{-3} \times N_{\symrm{A}}}{M_{\symrm{H_3BO_3}}}
         \end{equation*}
         而
         \begin{equation*}
-            M_{\symrm{H_3BO_3}} = 3 \times 1.00797 + 10.82 + 3 \times 15.9994 = 29.84331
+            M_{\symrm{H_3BO_3}} = 3 \times 1.00797 + 10.82 + 3 \times 15.9994 = 61.84211\,\symrm{g/mol}
         \end{equation*}
         由题意,\,$N_{\symrm{H_3BO_3}} \sigma_{\symrm{H_3BO_3}} = 0.1 \vSigma_{\text{水}}$,\,于是
         \begin{equation*}
@@ -148,15 +148,15 @@
         \end{equation*}
         联立上述式,\,得
         \begin{equation*}
-            C_{\symrm{H_3BO_3}} = 144.87\,\symrm{mg/(kg\text{水})}
+            C_{\symrm{H_3BO_3}} = 144.87\,\symrm{ppm}
         \end{equation*}
         在1\,kg水中,\,物质的量$n(\symrm{H_3BO_3}) = n(\symrm{B})$,\,故有
         \begin{equation*}
-            \frac{C_{\symrm{B}}}{A_{\symrm{B}}} = \frac{C_{\symrm{H_3BO_3}}}{M_{\symrm{H_3BO_3}}}
+            \frac{C_{\symrm{B}}}{M_{\symrm{B}}} = \frac{C_{\symrm{H_3BO_3}}}{M_{\symrm{H_3BO_3}}}
         \end{equation*}
         解得
         \begin{equation*}
-            C_{\symrm{B}} = 52.524\,\symrm{mg/(kg\text{水})}
+            C_{\symrm{B}} = 52.524\,\symrm{ppm}
         \end{equation*}
     \end{solution}
 \end{exercise}
@@ -181,13 +181,13 @@
 \begin{exercise}
     设某吸收剂的微观吸收截面$\sigma_{\symrm{a}}(E)$服从$1/v$定律,\,假定近似中子能谱可用$1/E$谱描述,\,试求该吸收剂第$g$群$(E_{g-1},\,E_g)$的平均微观吸收截面$\sigma_{\symrm{a}\,g}$.\,
     \begin{solution}
-        由题意,\,$\sigma_{\symrm{a}}(E) \propto 1/v \propto 1/\sqrt{E},\,n(E) \propto 1/E$,\,则$\phi(E) \propto (1/E) \cdot \sqrt{E} = 1/\sqrt{E}$,\,于是
+        由题意,\,$\sigma_{\symrm{a}}(E) \propto 1/v \propto 1/\sqrt{E}$,\,$\phi(E) \propto (1/E)$,\,于是
         \begin{equation*}
-            \sigma_{\symrm{a}\,g} = \frac{\int_{E_{g-1}}^{E_g} \sigma_{\symrm{a}}(E) \phi(E) \dd{E}}{\int_{E_{g-1}}^{E_g} \phi(E) \dd{E}} \propto \frac{\int_{E_{g-1}}^{E_g} E^{-1} \dd{E}}{\int_{E_{g-1}}^{E_g} E^{-1/2} \dd{E}} = \frac{\loge (E_g/E_{g-1})}{2\left(\sqrt{E_g} - \sqrt{E_{g-1}}\right)}
+            \sigma_{\symrm{a}\,g} = \frac{\int_{E_{g-1}}^{E_g} \sigma_{\symrm{a}}(E) \phi(E) \dd{E}}{\int_{E_{g-1}}^{E_g} \phi(E) \dd{E}} \propto \frac{\int_{E_{g-1}}^{E_g} E^{-3/2} \dd{E}}{\int_{E_{g-1}}^{E_g} E^{-1} \dd{E}} = \frac{2\left(1/\sqrt{E_{g-1}} - 1/\sqrt{E_g}\right)}{\loge \left(E_g / E_{g-1}\right)}
         \end{equation*}
-        将$\sigma_{\symrm{a}}(E) \propto 1/\sqrt{E},\,\phi(E) \propto 1/\sqrt{E}$的比例系数全部归一为$C_{\sigma}$,\,则
+        将$\sigma_{\symrm{a}}(E) \propto 1/\sqrt{E},\,\phi(E) \propto 1/E$的比例系数全部归一为$C_{\sigma}$,\,则
         \begin{equation*}
-            \sigma_{\symrm{a}\,g} = \frac{C_{\sigma} \loge (E_g/E_{g-1})}{2\left(\sqrt{E_g} - \sqrt{E_{g-1}}\right)}
+            \sigma_{\symrm{a}\,g} = \frac{2 C_{\sigma} \left(1/\sqrt{E_{g-1}} - 1/\sqrt{E_g}\right)}{\loge \left(E_g / E_{g-1}\right)}
         \end{equation*}
     \end{solution}
 \end{exercise}

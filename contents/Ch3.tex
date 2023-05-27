@@ -11,7 +11,7 @@
             \end{equation*}
             \item 慢化过程:\,中子能量不断减少,\,直至变成热中子的过程.\,
             \item 扩散过程:\,热中子在介质中位置不断变化的过程.\,
-            \item 中子流密度:\,沿着某一方向穿过单位面积的中子数,\,用$\vec{J}$表示.\,
+            \item 中子流密度:\,单位时间内沿着某一方向穿过单位面积的中子数,\,用$\vec{J}$表示.\,
             \item 中子慢化长度:\,无限均匀介质中,\,快中子从点源出发至慢化成热中子所穿行的直线距离方均值的$\frac{1}{6}$. 
             \item 中子扩散长度:\,无限均匀介质中,\,热中子从产生至被吸收时所穿行的直线距离方均值的$\frac{1}{6}$. 
             \item 中子徙动长度:\,无限均匀介质中,\,快中子从产生到被吸收时所穿行的直线距离方均值的$\frac{1}{6}$. 
@@ -40,15 +40,14 @@
         \item 除裂变以外,\,被吸收的中子数占总中子数的百分比$R_{\symrm{a}}$; 
     \end{enumerate}
     \begin{solution}
-        由题意,\,$\keff = 1$,\,系统内中子产生=系统内中子(吸收+泄漏),\,而中子泄漏损失数为$0.1\nu$,\,则被吸收的中子数$0.9\nu$.
         \begin{enumerate}[(1)]
-            \item 被吸收的中子中,\,用于维持裂变反应的中子数为$\dfrac{\sigma_{\symrm{f}}}{\sigma_{\symrm{a}}} \times 0.9\nu = \dfrac{0.9\nu}{1+\alpha}$(取$\alpha = 0.17$),\,于是
+            \item 堆处于临界状态，$\nu$个中子中，必须有1个中子来维持链式裂变反应，于是
             \begin{equation*}
-                R_{\symrm{f}} = \frac{\frac{0.9\nu}{1+\alpha}}{\nu} = \frac{0.9}{1+\alpha} = \frac{0.9}{1+0.17} = 0.7692
+                R_{\symrm{f}} = \frac{1}{\nu} = \frac{1}{2.43} = 0.4115
             \end{equation*}
-            \item 除裂变以外,\,被吸收的中子数,\,即发生辐射俘获的中子数为$\dfrac{\sigma_{\gamma}}{\sigma_{\symrm{a}}} \times 0.9\nu = \dfrac{0.9 \alpha \nu}{1+\alpha}$,\,于是
+            \item 剔除泄漏的$0.1\nu$个中子以及维持裂变的1个中子，于是
             \begin{equation*}
-                R_{\symrm{a}} = \frac{\frac{0.9 \alpha \nu}{1+\alpha}}{\nu} = \frac{0.9\alpha}{1+\alpha} = \frac{0.9\times 0.17}{1+0.17} = 0.1308
+                R_{\symrm{a}} = \frac{\nu - 0.1\nu - 1}{\nu} = 0.4885
             \end{equation*}
         \end{enumerate}
     \end{solution}
@@ -84,15 +83,13 @@
 \begin{exercise}
     在一个运行着的核反应堆堆芯中,\,一个热中子即将与一个铀-238核相互作用.\,以下哪一种情形最有可能发生,\,并且将怎样影响堆芯的$\keff$?\xparen
     \begin{xchoices}[showanswer=true]
-        \item* 该中子将被散射,\,使$\keff$不变
+        \item 该中子将被散射,\,使$\keff$不变
         \item 该中子将被吸收,\,铀-238核将裂变,\,使$\keff$减小
         \item 该中子将被吸收,\,铀-238核将裂变,\,使$\keff$增大
-        \item 该中子将被吸收,\,铀-238核将衰变,\,生成钚-239,\,使$\keff$增大
+        \item* 该中子将被吸收,\,铀-238核将衰变,\,生成钚-239,\,使$\keff$增大
     \end{xchoices}
     \vspace{1em}
-    \begin{solution}
-        取热中子能量$E_{\symrm{n}}=0.0253\,\symrm{eV}$,\,查附录3,\,得${}^{238}\symrm{U}$截面数据:\,$\sigma_{\symrm{s}} = 9.299832\,\symrm{b},\,\sigma_{\gamma} = 2.682808\,\symrm{b},\,\sigma_{\symrm{f}} = 1.679563\times 10^{-5}\,\symrm{b}$,\,显然有$\sigma_{\symrm{s}} > \sigma_{\gamma} > \sigma_{\symrm{f}}$,\,即最有可能发生散射,\,则此时该热中子既不引发新的裂变产生新的中子,\,又不被吸收,\,也没有发生泄漏,\,故$\keff$不变,\,选A.\,
-    \end{solution}
+    \noindent {\color{third}{【注】}} {\kaishu 此题有争议，尚未解决。个人认为按截面大小比较，应该选A，但似乎助教是按D批改的。}
 \end{exercise}
 
 \begin{exercise}
@@ -139,15 +136,15 @@
         轻水的慢化能力来自氢核,\,氧核两方面的贡献,\,即
         \begin{align*}
             &\xi_{\symrm{H_2O}}\vSigma_{s,\,H_2O} = \xi_{\symrm{H}}\vSigma_{s,\,H} + \xi_{\symrm{O}}\vSigma_{s,\,O} \\
-            \Rightarrow & \xi_{\symrm{H_2O}}(N_{\symrm{H}}\sigma_{\symrm{H}} + N_{\symrm{O}}\sigma_{\symrm{O}}) = \xi_{\symrm{H}}N_{\symrm{H}}\sigma_{\symrm{H}} + \xi_{\symrm{O}}N_{\symrm{O}}\sigma_{\symrm{O}}
+            \Rightarrow & \xi_{\symrm{H_2O}}(N_{\symrm{H}}\sigma_{\symrm{s,H}} + N_{\symrm{O}}\sigma_{\symrm{s,O}}) = \xi_{\symrm{H}}N_{\symrm{H}}\sigma_{\symrm{s,H}} + \xi_{\symrm{O}}N_{\symrm{O}}\sigma_{\symrm{s,O}}
         \end{align*}
         $N_{\symrm{H}}=2N_{\symrm{O}}$,\,两边同除以$N_{\symrm{O}}$,\,得
         \begin{equation*}
-            \xi_{\symrm{H_2O}}(2\sigma_{\symrm{H}} + \sigma_{\symrm{O}}) = 2\xi_{\symrm{H}}\sigma_{\symrm{H}} + \xi_{\symrm{O}}\sigma_{\symrm{O}}
+            \xi_{\symrm{H_2O}}(2\sigma_{\symrm{s,H}} + \sigma_{\symrm{s,O}}) = 2\xi_{\symrm{H}}\sigma_{\symrm{s,H}} + \xi_{\symrm{O}}\sigma_{\symrm{s,O}}
         \end{equation*}
         即
         \begin{equation*}
-            \xi_{\symrm{H_2O}} = \frac{2\xi_{\symrm{H}}\sigma_{\symrm{H}} + \xi_{\symrm{O}}\sigma_{\symrm{O}}}{2\sigma_{\symrm{H}} + \sigma_{\symrm{O}}} = \frac{2\times 1\times 20 + 0.1199\times 38}{2\times 20 + 38} = 0.5712
+            \xi_{\symrm{H_2O}} = \frac{2\xi_{\symrm{H}}\sigma_{\symrm{s,H}} + \xi_{\symrm{O}}\sigma_{\symrm{s,O}}}{2\sigma_{\symrm{s,H}} + \sigma_{\symrm{s,O}}} = \frac{2\times 1\times 20 + 0.1199\times 38}{2\times 20 + 38} = 0.5712
         \end{equation*}
         平均碰撞次数
         \begin{equation*}
